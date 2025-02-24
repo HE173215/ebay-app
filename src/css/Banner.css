@@ -1,0 +1,9 @@
+.ant-menu-horizontal {
+    justify-content: center; /* Căn giữa menu */
+    padding: 10px;
+}
+
+.ant-menu-item {
+    font-size: 12px; /* Giảm kích thước chữ */
+    padding: 0 10px; /* giảm khoảng cách giữa các item */
+}

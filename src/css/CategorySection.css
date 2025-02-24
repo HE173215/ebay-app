@@ -1,0 +1,58 @@
+.category-section {
+    padding: 20px 0;
+}
+
+.category-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.category-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.category-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Thêm CSS cho Slick Carousel */
+.slick-slide {
+    padding: 0 10px; /* Thêm padding cho slide */
+}
+
+.slick-track {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các slide */
+    align-items: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px;
+    color: black; /* Màu của nút chuyển */
+}
+
+.slick-prev {
+    left: -25px; /* Vị trí của nút chuyển bên trái */
+}
+
+.slick-next {
+    right: -25px; /* Vị trí của nút chuyển bên phải */
+}

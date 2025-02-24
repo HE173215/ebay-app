@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './pages/Header';
+import Footer from './pages/Footer';
+import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
+import DataProvider from './context/DataContext'; // Import DataProvider
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <DataProvider> {/* Wrap the entire app with DataProvider */}
+            <Router>
+                <div className="App">
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/category/:categoryId" element={<ProductPage />} />
+                    </Routes>
+                    <Footer />
+                </div>
+            </Router>
+        </DataProvider>
+    );
 }
 
 export default App;
